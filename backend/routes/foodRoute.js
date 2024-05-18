@@ -19,10 +19,10 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-foodRouter.post("/add",isAdmin,  upload.single("image"),addFood);
-foodRouter.get("/list", isAdmin, listFood);
-foodRouter.post("/remove", isAdmin, removeFood);
+foodRouter.post("/add",  upload.single("image"),addFood);
+foodRouter.get("/list", listFood);
+foodRouter.delete("/remove/:id",removeFood);
 
 export default foodRouter;
 
-// http://localhost:7400/api/food/list
+// http://localhost:7400/api/food/add
