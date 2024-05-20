@@ -1,19 +1,13 @@
-// import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken"
 import bcrypt from "bcrypt"
 import validator from "validator"
 import { userModel } from "../models/userModel.js"
-// import { userModel } from "../models/userModel.js"
 
 const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' });
 }
 
-// const createToken = (id) => {
-//     return jwt.sign({ id }, process.env.JWT)
-// }
 
-//login user
 export const loginUser = async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -23,7 +17,6 @@ export const loginUser = async (req, res) => {
             return res.status(400).res.json({ success: false, message: "User Doesn't exist" })
         }
         const isMatch = await bcrypt.compare(password, user.password);
-
         if (!isMatch) {
             return res.status(400).res.json({ success: false, message: "Invalid credentials" })
 
