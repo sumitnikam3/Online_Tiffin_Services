@@ -1,0 +1,66 @@
+
+header .navbar {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+}
+.addFood{
+  padding: 140px;
+
+}
+.aboutUs{
+  padding: 100px;
+}
+header .navbar.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+}
+#subscription{
+  margin-top: 100px;
+  padding: 100px;
+}
+
+header .logo img {
+  width: auto;
+  max-width: inherit;
+  max-height: 80px;
+}
+header .nav-link {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--yellow);
+  padding: 0 1rem !important;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--oswald-font);
+  text-transform: uppercase;
+
+}
+
+header .sticky .nav-link {
+  color: var(--light-black);
+}
+header .nav-link:hover {
+  color: var(--light-red);
+}
+header .cart {
+  position: relative;
+  top: -0.4375rem;
+}
+header .roundpoint {
+  width: 16px;
+  height: 16px;
+  background: var(--light-red);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 11.2px;
+  line-height: 16px;
+  text-align: center;
+  font-style: normal;
+  position: absolute;
+  top: 3.2px;
+  right: -8px;
+}
